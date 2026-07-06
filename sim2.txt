@@ -1,0 +1,40 @@
+# --- BTA SIMULATION 2: THE GREAT MULTIVERSE COLLAPSE ---
+# Objective: Force reallocations, deep recursive pruning, and array shifting!
+
+INIT 0
+
+# 1. Force EVENT array reallocation on Prime Timeline
+# Initial capacity is 2. Adding 4 events forces multiple reallocs!
+ADD_EVENT 0 10 "Timeline Stabilized" 50
+ADD_EVENT 0 11 "Agent Alpha Recruited" 70
+ADD_EVENT 0 12 "Rogue AI Escapes" 90
+ADD_EVENT 0 13 "Sector Lockdown Initiated" 100
+
+# 2. Force BRANCH array reallocation on Prime Timeline
+# Initial capacity is 2. Creating 3 branches forces realloc!
+BRANCH 0 1
+BRANCH 0 2
+BRANCH 0 3
+
+# Populate Branch 1 (The Cyberpunk Reality)
+ADD_EVENT 1 101 "Cyberpunk Renaissance Begins" 60
+
+# Populate Branch 2 and create a Sub-Branch (Testing Tree Depth)
+ADD_EVENT 2 201 "Dinosaurs Never Extinct" 85
+BRANCH 2 22
+ADD_EVENT 22 221 "T-Rex Elected Mayor" 95
+
+# Populate Branch 3 (The Waterworld Reality)
+ADD_EVENT 3 301 "Ice Caps Melt Completely" 75
+
+# Print the chaotic multiverse state
+PRINT
+
+# 3. THE ULTIMATE TEST: Prune Branch 2
+# This MUST:
+# - Recursively destroy Branch 2 and Branch 22 (and their events).
+# - Shift Branch 3 to the left in Prime Timeline's branch array!
+PRUNE 2
+
+# Print the final surviving multiverse
+PRINT

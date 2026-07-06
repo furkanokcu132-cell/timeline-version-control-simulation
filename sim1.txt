@@ -1,0 +1,21 @@
+# --- BTA SIMULATION 1: BASIC TIMELINE OPERATIONS ---
+# Objective: Test initialization, string parsing, and simple pruning.
+
+INIT 0
+
+# Adding basic events to the Prime Timeline (ID: 0)
+ADD_EVENT 0 101 "The Bureau is Founded" 100
+ADD_EVENT 0 102 "First Time Machine Built" 80
+
+# Anomaly occurs: Creating a single branch
+BRANCH 0 1
+ADD_EVENT 1 201 "Minor Anomaly in London" 30
+
+# Print state before taking action
+PRINT
+
+# Central Committee orders the anomaly erased
+PRUNE 1
+
+# Print final secure state
+PRINT
